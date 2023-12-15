@@ -1,0 +1,197 @@
+@charset "UTF-8";
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+
+/* Style du body **********************/
+
+body {
+    color: #212529;
+    cursor: default;
+    width: 100%;
+    font-family: 'Roboto', sans-serif;
+}
+
+/* Style du header **********************/
+header {
+    background-color: #344A40;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 1;
+}
+
+header section {
+    width: 1140px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+header section > a {
+    color: #FFF;
+    padding: 20px;
+    text-decoration: none;
+}
+
+header nav {
+    display: flex;
+    align-items: center;
+}
+
+header nav a {
+    color: #9A9DA0;
+    text-decoration: none;
+    padding: 20px 16px;
+}
+
+header nav a:hover {
+    color: #FFF;
+}
+
+header nav a.active {
+    color: #FFF;
+}
+
+
+/* Style du main **********************/
+
+main {
+    width: 1140px;
+    margin: 0 auto;
+    background-color: #F2F2F2;
+    padding-top: 80px;
+}
+
+/* Style du tableau **********************/
+
+/* Style commun pour tous les tableaux */
+.people-table,
+.fullstack-table,
+.no-work-table,
+.password-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.people-table th, .people-table td,
+.fullstack-table th, .fullstack-table td,
+.no-work-table th, .no-work-table td,
+.password-table th, .password-table td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+.people-table th,
+.fullstack-table th,
+.no-work-table th,
+.password-table th {
+    background-color: #f2f2f2;
+    font-weight: bold;
+}
+
+/* Style des lignes impaires pour tous les tableaux */
+.people-table tbody tr:nth-child(odd),
+.fullstack-table tbody tr:nth-child(odd),
+.no-work-table tbody tr:nth-child(odd),
+.password-table tbody tr:nth-child(odd) {
+    background-color: #f9f9f9;
+}
+
+/* Style de la cellule du mot de passe pour tous les tableaux */
+.people-table td:nth-child(4),
+.fullstack-table td:nth-child(4),
+.no-work-table td:nth-child(4),
+.password-table td:nth-child(4) {
+    font-family: monospace;
+}
+
+/* Style du footer **********************/
+footer {
+    background-color: #343A40;
+    color: #FFFFFF;
+    padding: 20px 0;
+    text-align: center;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+footer h4 {
+    text-transform: uppercase;
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+
+footer p {
+    font-size: 0.9em;
+    line-height: 1.6em;
+}
+
+footer a {
+    padding: 0 5px;
+    font-size: 1em;
+    color: #007BFF;
+    text-decoration: none;
+}
+
+footer a:hover {
+    color: #0069D9;
+    text-decoration: underline;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.footer-content div {
+    flex: 1;
+    margin: 10px;
+}
+
+.footer-content img {
+    max-width: 100%;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+/* Stylisation des Éléments div et img pour la partie Fetch*/
+#photos {
+    max-height: 400px; /* Pour permettre le défilement des minatures */
+    overflow-y: auto; /* Active le défilement vertical si nécessaire */
+    padding: 10px;
+    border: 1px solid #ccc;
+    margin: 20px 0;
+}
+
+#photos div {
+    margin-bottom: 20px;
+}
+
+#photos img {
+    width: 100px;
+    height: auto;
+    display: block;
+}
+
+.photo-item {
+    margin-bottom: 20px;
+}
+
+.photo-item img {
+    width: 100px;
+    height: auto;
+    display: block;
+    margin-bottom: 10px;
+}
+

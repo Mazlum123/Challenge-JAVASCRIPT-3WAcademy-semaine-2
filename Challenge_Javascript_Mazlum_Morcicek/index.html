@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <title>Challenge JAVASCRIPT Vendredi 15 Décembre 2023</title>
+</head>
+<body>
+<script src="assets/js/morcicek_mazlum.js"></script>
+
+<header>
+    <section>
+        <a href="#">3w academy</a>
+        <nav>
+            <a href="index.html" class="active category-link" data-category="all">Liste All</a>
+            <a href="assets/ressources/doctors.html" class="category-link" data-category="doctors">Doctors</a>
+            <a href="assets/ressources/fullstack.html" class="category-link" data-category="fullstack">Full Stack Developers</a>
+            <a href="assets/ressources/nowork.html" class="category-link" data-category="nowork">No work</a>
+            <a href="assets/ressources/password.html" class="category-link" data-category="password">Password</a>
+            <a href="assets/ressources/sujet2/fetch.html" class="category-link" data-category="Fetch">Fetch</a>
+        </nav>
+    </section>
+</header>
+
+<main>
+    <section id="section1">
+        <h2>Liste des Personnes</h2>
+        <table class="people-table">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Nom</th>
+                    <th>Emplois</th>
+                    <th>Mot de passe</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Utilisez une boucle pour parcourir toutes les personnes du fichier.js -->
+                <script>
+                    const peopleTable = document.querySelector('.people-table tbody');
+
+                    // Parcours de toutes les personnes et ajout des lignes au tableau
+                    populations.forEach(person => {
+                        const row = document.createElement('tr');
+                        row.innerHTML = `
+                            <td>${person.id}</td>
+                            <td>${person.name}</td>
+                            <td>${person.jobs && person.jobs.length > 0 ? person.jobs.join(', ') : 'Aucun job'}</td>
+                            <td>${person.password ? person.password : 'Aucun mot de passe'}</td>
+                        `;
+                        peopleTable.appendChild(row);
+                    });
+                </script>
+            </tbody>
+        </table>
+    </section>
+</main>
+
+<footer>
+    <div class="footer-content">
+        <div>
+            <h4>Adresse</h4>
+            <p>123 Rue du Lorem Ipsum<br>75000 Ville Ipsum</p>
+        </div>
+        <div>
+            <h4>Contact</h4>
+            <p>Email : contact@example.com<br>Tél : +33 1 23 45 67 89</p>
+        </div>
+        <div>
+            <h4>Réseaux sociaux</h4>
+            <a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
+        </div>
+        <div>
+            <h4>Newsletter</h4>
+            <p>Abonnez-vous pour les dernières mises à jour.</p>
+            <form action="#">
+                <input type="email" placeholder="Votre adresse email">
+                <button type="submit">S'abonner</button>
+            </form>
+        </div>
+    </div>
+    <p>Copyright &copy; Your Website 2023 - <a href="#">Privacy</a> - <a href="#">Terms</a></p>
+</footer>
+
+</body>
+</html>
